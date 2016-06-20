@@ -11,7 +11,7 @@
 #define Addr 0x29
 
 int red = 0, green = 0, blue = 0, cData = 0;
-float luminance = 0.0;
+double luminance = 0.0;
 void setup()
 {
   // Set variable
@@ -103,12 +103,13 @@ void loop()
 
   // Output data to dashboard
   Particle.publish("Red Color Luminance   : ", String(red));
-  delay(100);
+  delay(1000);
   Particle.publish("Green Color Luminance : ", String(green));
-  delay(100);
+  delay(1000);
   Particle.publish("Blue Color Luminance  : ", String(blue));
-  delay(100);
+  delay(1000);
   Particle.publish("IR Luminance          : ", String(cData));
+  delay(1000);
   Particle.publish("Ambient Light Luminance : ", String(luminance));
-  delay(500);
+  delay(1000);
 }
